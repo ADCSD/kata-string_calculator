@@ -1,0 +1,37 @@
+site_name: Kata String Calculator
+site_dir: ../site
+
+nav:
+  - Introducción: index.md
+  - Preparación: step0.md
+  - R1. Suma dos números: step1.md
+  - R2. Suma varios números: step2.md
+  - R3. Saltos de línea: step3.md
+  - R4. Varios delimitadores: step4.md
+  - R5. No números negativos: step5.md
+  - R6. No números mayores 1000: step6.md
+  - R7. Delimitadores largos: step7.md
+  - R8. Varios delimitadores: step8.md
+  - R9. Varios delimitadores largos: step9.md
+
+theme:
+    name: material
+    language: es
+    
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - codehilite
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.details
+  - markdown.extensions.toc:
+      permalink: false
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - attr_list
+extra_css:
+  - assets/style.css  
+
+

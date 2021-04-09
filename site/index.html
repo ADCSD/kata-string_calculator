@@ -1,0 +1,587 @@
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>Kata String Calculator</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.a2408e81.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="assets/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kata-string-calculator" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="." title="Kata String Calculator" class="md-header-nav__button md-logo" aria-label="Kata String Calculator">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Kata String Calculator
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Introducción
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Kata String Calculator" class="md-nav__button md-logo" aria-label="Kata String Calculator">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Kata String Calculator
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introducción
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="." title="Introducción" class="md-nav__link md-nav__link--active">
+      Introducción
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-de-la-kata" class="md-nav__link">
+    Descripción de la Kata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    Enunciado
+  </a>
+  
+    <nav class="md-nav" aria-label="Enunciado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    Requisitos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-desarrollo" class="md-nav__link">
+    Consejos para desarrollo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuente" class="md-nav__link">
+    Fuente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soluciones" class="md-nav__link">
+    Soluciones
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step0/" title="Preparación" class="md-nav__link">
+      Preparación
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step1/" title="R1. Suma dos números" class="md-nav__link">
+      R1. Suma dos números
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step2/" title="R2. Suma varios números" class="md-nav__link">
+      R2. Suma varios números
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step3/" title="R3. Saltos de línea" class="md-nav__link">
+      R3. Saltos de línea
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step4/" title="R4. Varios delimitadores" class="md-nav__link">
+      R4. Varios delimitadores
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step5/" title="R5. No números negativos" class="md-nav__link">
+      R5. No números negativos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step6/" title="R6. No números mayores 1000" class="md-nav__link">
+      R6. No números mayores 1000
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step7/" title="R7. Delimitadores largos" class="md-nav__link">
+      R7. Delimitadores largos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step8/" title="R8. Varios delimitadores" class="md-nav__link">
+      R8. Varios delimitadores
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="step9/" title="R9. Varios delimitadores largos" class="md-nav__link">
+      R9. Varios delimitadores largos
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-de-la-kata" class="md-nav__link">
+    Descripción de la Kata
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    Enunciado
+  </a>
+  
+    <nav class="md-nav" aria-label="Enunciado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos" class="md-nav__link">
+    Requisitos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-desarrollo" class="md-nav__link">
+    Consejos para desarrollo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuente" class="md-nav__link">
+    Fuente
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soluciones" class="md-nav__link">
+    Soluciones
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="kata-string-calculator">Kata String Calculator</h1>
+<div style="text-align: right">
+    <div class="md-button button-tag blue">TDD</div>
+    <div class="md-button button-tag green">Beginner</div>
+</div>
+
+<h2 id="descripcion-de-la-kata">Descripción de la Kata</h2>
+<p>La Kata String Calculator es una kata muy sencilla, que permite al desarrollador iniciarse en el mundo del TDD, gracias a los requisitos bien estructurados e incrementales. 
+También es una buena kata para aprender un lenguaje, al ser sencilla se aprende la estructura de proyecto, de tests y de llamadas del lenguaje. </p>
+<h2 id="enunciado">Enunciado</h2>
+<p>La famosa empresa de calculadoras “Casio” ha contratado los servicios de nuestra compañía. Quieren lanzar al mercado un nuevo concepto de calculadora basada en proceso de texto.</p>
+<p>El problema es que “Casio” es un cliente un poco difícil, no tiene claros los requisitos y quiere resultados inmediatos, sin perder funcionalidad ya implementada.</p>
+<p>Al frente del proyecto ha puesto a los mejores ingenieros que, con ayuda de TDD, intentarán dar respuesta a los requisitos cambiantes sin romper ninguna funcionalidad previa.</p>
+<p>¿Como podemos ayudar a Casio?</p>
+<h3 id="requisitos">Requisitos</h3>
+<ol>
+<li>Crea una String Calculator con el método: int add(String input)<ul>
+<li>El parámetro del método puede contener 0, 1 o 2 números y devolverá su suma (para un string vacío devolverá 0). Por ejempo: "" o "1" o "1,2”</li>
+<li>Comieza por un test simple para un string vacío y luego para 1 y 2 números.</li>
+<li>Recuerda resolver el problema de la manera más simple posible para que te fuerce a escribir las pruebas que aún no se te habían ocurrido.</li>
+<li>Recuerda refactorizar después de conseguir pasar cada test.</li>
+</ul>
+</li>
+<li>Permite al metodo “add" manejar cualquier cantidad de números.</li>
+<li>Permite al método "add" manejar saltos de línea entre números en lugar de usar comas.<ul>
+<li>La siguiente entrada es correcta: "1\n2,3" (el resultado será 6)</li>
+<li>La siguiente entrada NO es correcta: "1,\n" (no hace falta que la pruebes, es simplemente para clarificar)</li>
+</ul>
+</li>
+<li>Soporta diferentes delimitadores<ul>
+<li>Para cambiar un delimitador, el comienzo del string debe contener una línea separada que sea como esta: "//[delimitador]\n[números...]". Por ejemplo: "//;\n1;2" debe dar como resultado 3 donde el delimitador por defecto es ";".</li>
+<li>La primera línea es opcional. Todos los escenarios existentes hasta ahora, deben estar soportados.</li>
+</ul>
+</li>
+<li>Llamar al método “add" con números negativos deberá lanzar una excepción con el texto "negativos no soportados" y el número negativo que ha sido pasado. Si hay múltiples números negativos, muestra todos ellos en el mensaje de la excepción.</li>
+<li>Los numeros mayores de 1000 deben ser ignorados. <ul>
+<li>Por ejemplo "2,1001" dará como resultado 2.</li>
+</ul>
+</li>
+<li>Los delimitadores pueden ser de cualquier longitud con el siguiente formato: "//[delimiter]\n". <ul>
+<li>Por ejemplo: "//[;;;]\n1;;;2;;;3" debe dar como resultado 6.</li>
+</ul>
+</li>
+<li>Permite múltiples delimitadores de la siguiente manera: "//[delim1][delim2]\n". <ul>
+<li>Por ejemplo: "//[#][%]\n1#2%3" debe dar como resultado 6.</li>
+</ul>
+</li>
+<li>Asegúrate de que puedes manejar delimitadores de cualquier longitud mayor de un caracter.</li>
+</ol>
+<h3 id="consejos-para-desarrollo">Consejos para desarrollo</h3>
+<ul>
+<li>Intentaremos no leer el enunciado completo. Iremos leyendo poco a poco.</li>
+<li>Haremos solo una tarea a la vez. Tenemos que aprender a trabajar de forma incremental.</li>
+<li>Para esta kata solo vamos a testear las entradas correctas. Por agilidad en la session.</li>
+<li>Llegaremos hasta donde nos de tiempo. No se trata de terminarlo, sino de aprender durante el proceso.</li>
+<li>Programaremos entre todos. No existe una solución correcta y una incorrecta, se puede hacer de muchas formas.</li>
+</ul>
+<p>No te olvides de pasar los tests a cada cambio que se efectue del código, para verificar que funciona todo correctamente y que no se ha roto nada más.</p>
+<h3 id="fuente">Fuente</h3>
+<p>La kata ha sido extraida de <a href="http://www.solveet.com/exercises/Kata-String-Calculator/8">Solveet</a></p>
+<h2 id="soluciones">Soluciones</h2>
+<p>Todas las posibles soluciones las podéis ver en el <a href="https://github.com/ADCSD/kata-string_calculator">Github de ADCSD</a></p>
+<ul>
+<li><strong>Original</strong>. Es el proyecto vacío original con el que empezar el ejercicio</li>
+<li><strong>Kata-sesion</strong>. Es el proyecto tal y como quedó después de hacer una sesión de <code>CodingDojo</code></li>
+<li><strong>Solucion</strong>. Es el proyecto resuelto por completo que iremos viendo poco a poco en los siguientes capítulos</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+        
+          <a href="step0/" title="Preparación" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Preparación
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
