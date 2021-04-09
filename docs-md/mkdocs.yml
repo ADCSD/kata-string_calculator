@@ -1,5 +1,5 @@
 site_name: Kata String Calculator
-site_dir: ../site
+site_dir: ../docs
 
 nav:
   - Introducción: index.md
