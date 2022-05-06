@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.capgemini.adcsd.codingdojo</groupId>
+    <groupId>com.ccsw.adcsd.codingdojo</groupId>
     <artifactId>StringCalculator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 

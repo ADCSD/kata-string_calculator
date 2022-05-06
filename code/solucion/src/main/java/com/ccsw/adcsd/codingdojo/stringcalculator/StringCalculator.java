@@ -1,4 +1,4 @@
-package com.capgemini.adcsd.codingdojo.stringcalculator;
+package com.ccsw.adcsd.codingdojo.stringcalculator;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.capgemini.adcsd.codingdojo.stringcalculator;
+package com.ccsw.adcsd.codingdojo.stringcalculator;
 
 import org.junit.Assert;
 import org.junit.Rule;
