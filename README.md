@@ -7,7 +7,7 @@ El problema es que “Casio” es un cliente un poco difícil, no tiene claros l
 Al frente del proyecto ha puesto a los mejores ingenieros que, con ayuda de TDD, intentarán dar respuesta a los requisitos cambiantes sin romper ninguna funcionalidad previa.
 
 ¿Como podemos ayudar a Casio?
-
+ 
 ## Consejos
 
 + Intentaremos no leer el enunciado completo. Iremos leyendo poco a poco.
